@@ -1,5 +1,3 @@
-<?php
-
 /**
  * WallpaperHub
  *
@@ -11,7 +9,4 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-// Send users to the homepage
-Route::get('/', function() {
-    return view('index');
-});
+var app = angular.module('wallpaperHub', []);
