@@ -1,7 +1,7 @@
-WallpaperHub
-============
+Wallpaper Hub
+=============
 
-WallpaperHub is a website for wallpaper enthusiasts to share amazingly awesome wallpapers on the net.
+Wallpaper Hub is a website for wallpaper enthusiasts to share amazingly awesome wallpapers on the net.
 You can browse and download thousands of free desktop or mobile wallpapers from any device at any time.
 
 ## Feedback
@@ -16,7 +16,7 @@ You can also contribute to our codebase and make the site better. Please refer t
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within WallpaperHub, please send an email to Lyntor Paul Figueroa at lyntor.figueroa@gmail.com.
+If you discover a security vulnerability within Wallpaper Hub, please send an email to Lyntor Paul Figueroa at lyntor.figueroa@gmail.com.
 All security vulnerabilities will be promptly addressed.
 
 ## Copyright
@@ -25,4 +25,4 @@ All images remain property of their original owners.
 
 ## License
 
-WallpaperHub is open-sourced software licensed under the MIT license.
+Wallpaper Hub is open-sourced software licensed under the MIT license.
