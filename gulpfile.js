@@ -18,13 +18,15 @@ var elixir = require('laravel-elixir');
 // Register the tasks.
 elixir(function(mix) {
 
-    // Compile application style.
-    mix.sass('app.scss');
+    // Compile application styles.
+    mix.sass([
+        'app/main.scss'
+    ], 'public/css/app.css');
 
     // Compile vendor scripts.
     mix.scripts([
-        'vendor/angular.js',
-        'vendor/modernizr.js'
+        'app/vendor/angular.js',
+        'app/vendor/modernizr.js'
     ], 'public/js/vendor.js');
 
     // Compile application scripts.
