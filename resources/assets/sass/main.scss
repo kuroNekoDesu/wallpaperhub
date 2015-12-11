@@ -10,25 +10,59 @@
  */
 
 /**
+ * Options for sanitize.css.
+ */
+
+$root-background-color: #151515;
+$root-font-family: "Roboto", sans-serif;
+$root-font-size: 18px;
+$root-font-weight: 300;
+$root-color: #222222;
+
+/**
+ * Other options.
+ */
+
+$min-width: 1020px;
+
+/**
  * Vendor imports.
  */
 
-@import "vendor/sanitize";
-@import "vendor/cf";
+@import "sanitize.scss";
+
+/**
+ * Extend sanitize.css root styles.
+ */
+
+:root {
+  font-weight: $root-font-weight;
+}
 
 /**
  * Basic elements styles.
  */
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: #222222;
-}
-
 a {
   outline: 0 none;
+}
+
+/**
+ * Micro cleafix hack.
+ */
+
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 /**
@@ -36,12 +70,18 @@ a {
  */
 
 .container {
-  width: 1020px;
+  width: $min-width;
   height: auto;
   margin: 0 auto;
+  padding: 0 10px;
   position: relative;
   display: block;
-  @extend .cf;
+  @extend .clearfix;
+}
+
+.container-fluid {
+  padding: 0;
+  @extend .container;
 }
 
 /**
@@ -50,13 +90,13 @@ a {
 
 nav.top-nav {
   width: 100%;
-  min-width: 1020px;
+  min-width: $min-width;
   height: 50px;
   position: absolute;
   z-index: 1000;
   background-color: transparent;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  @extend .cf;
+  @extend .clearfix;
 
   ul {
     position: relative;
@@ -95,7 +135,16 @@ nav.top-nav {
  */
 header.main-header {
   width: 100%;
-  min-width: 1020px;
+  min-width: $min-width;
   height: 180px;
+  padding-top: 50px;
   background-position: bottom;
+
+  .logo {
+    width: 325px;
+    height: 80px;
+    display: block;
+    text-indent: -9999px;
+    background: transparent url("/images/logo.png") no-repeat center;
+  }
 }

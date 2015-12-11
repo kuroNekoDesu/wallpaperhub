@@ -9,4 +9,11 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-var app = angular.module('wallpaperHub', []);
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './app';
+
+var $mount = document.body;
+
+ReactDOM.render(<App />, $mount);

@@ -19,19 +19,20 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
 
     // Compile application styles.
-    mix.sass([
-        'app/main.scss'
-    ], 'public/css/app.css');
-
-    // Compile vendor scripts.
-    mix.scripts([
-        'app/vendor/angular.js',
-        'app/vendor/modernizr.js'
-    ], 'public/js/vendor.js');
+    mix.sass(
+        'main.scss',
+        'public/css/app.css',
+        {
+            includePaths: [
+                'node_modules/sanitize.css'
+            ]
+        }
+    );
 
     // Compile application scripts.
-    mix.scripts([
-        'app/main.js'
-    ], 'public/js/app.js');
+    mix.browserify(
+        'main.js',
+        'public/js/app.js'
+    );
 
 });
