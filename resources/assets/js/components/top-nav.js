@@ -10,6 +10,7 @@
  */
 
 import React from 'react';
+import {Link, IndexLink} from 'react-router';
 
 class TopNav extends React.Component {
     render() {
@@ -17,15 +18,15 @@ class TopNav extends React.Component {
             <nav className="top-nav">
                 <div className="container-fluid">
                     <ul className="left">
-                        <li><a href="/"><i className="fa fa-fort-awesome"></i></a></li>
-                        <li><a href="/latest">Latest</a></li>
-                        <li><a href="/popular">Popular</a></li>
-                        <li><a href="/random">Random</a></li>
-                        <li><a href="/community">Community</a></li>
+                        <li><IndexLink to="/"><i className="fa fa-fort-awesome"></i></IndexLink></li>
+                        <li><Link to="/recent">Recent</Link></li>
+                        <li><Link to="/popular">Popular</Link></li>
+                        <li><Link to="/random">Random</Link></li>
+                        <li><Link to="/community">Community</Link></li>
                     </ul>
                     <ul className="right">
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
                     </ul>
                 </div>
             </nav>

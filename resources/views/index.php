@@ -12,6 +12,7 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<div id="root"></div>
 <script src="<?= url('/js/app.js') ?>" type="text/javascript"></script>
 </body>
 </html>

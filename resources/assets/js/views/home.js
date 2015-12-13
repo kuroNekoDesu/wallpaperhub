@@ -9,10 +9,14 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-import ReactDOM from 'react-dom';
+import React from 'react';
 
-import routes from './routes';
+class HomeView extends React.Component {
+    render() {
+        return(
+            <h1>It works!</h1>
+        );
+    };
+}
 
-let mountTo = document.getElementById('root');
-
-ReactDOM.render(routes, mountTo);
+export default HomeView;

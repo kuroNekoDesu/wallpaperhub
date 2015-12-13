@@ -10,13 +10,14 @@
  */
 
 import React from 'react';
+import {Link, IndexLink} from 'react-router';
 
 class MainHeader extends React.Component {
     render() {
         return(
             <header className="main-header" style={{backgroundImage: 'url("' + this.props.background + '")'}}>
                 <div className="container">
-                    <a href="/" className="logo">WallpaperHub</a>
+                    <IndexLink to="/" className="logo">WallpaperHub</IndexLink>
                 </div>
             </header>
         );

@@ -11,18 +11,19 @@
 
 import React from 'react';
 
-import TopNav from './components/top-nav';
-import MainHeader from './components/main-header';
+import TopNav from '../components/top-nav';
+import MainHeader from '../components/main-header';
 
-class App extends React.Component {
+class AppView extends React.Component {
     render() {
         return(
             <div>
                 <TopNav />
                 <MainHeader background="/images/headers/default.jpg" />
+                {this.props.children}
             </div>
         );
     }
 }
 
-export default App;
+export default AppView;

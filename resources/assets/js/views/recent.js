@@ -9,10 +9,14 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-import ReactDOM from 'react-dom';
+import React from 'react';
 
-import routes from './routes';
+class RecentView extends React.Component {
+    render() {
+        return(
+            <h1>React is awesome!</h1>
+        );
+    };
+}
 
-let mountTo = document.getElementById('root');
-
-ReactDOM.render(routes, mountTo);
+export default RecentView;

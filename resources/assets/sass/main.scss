@@ -36,7 +36,7 @@ $min-width: 1020px;
  */
 
 :root {
-  font-weight: $root-font-weight;
+    font-weight: $root-font-weight;
 }
 
 /**
@@ -44,7 +44,7 @@ $min-width: 1020px;
  */
 
 a {
-  outline: 0 none;
+    outline: 0 none;
 }
 
 /**
@@ -52,17 +52,17 @@ a {
  */
 
 .clearfix {
-  *zoom: 1;
+    *zoom: 1;
 
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
 
-  &:after {
-    clear: both;
-  }
+    &:after {
+      clear: both;
+    }
 }
 
 /**
@@ -70,18 +70,18 @@ a {
  */
 
 .container {
-  width: $min-width;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 10px;
-  display: block;
-  position: relative;
-  @extend .clearfix;
+    width: $min-width;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: block;
+    position: relative;
+    @extend .clearfix;
 }
 
 .container-fluid {
-  padding: 0;
-  @extend .container;
+    padding: 0;
+    @extend .container;
 }
 
 /**
@@ -89,65 +89,70 @@ a {
  */
 
 nav.top-nav {
-  width: 100%;
-  min-width: $min-width;
-  height: 50px;
-  position: absolute;
-  z-index: 1000;
-  background-color: transparent;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  @extend .clearfix;
+    width: 100%;
+    min-width: $min-width;
+    height: 50px;
+    position: absolute;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
-  ul {
-    position: relative;
-    list-style-type: none;
+    ul {
+        position: relative;
+        list-style-type: none;
 
-    &.left {
-      float: left;
+        &.left {
+            float: left;
+        }
+
+        &.right {
+            float: right;
+        }
+
+        li {
+            float: left;
+            line-height: 50px;
+            text-align: center;
+            transition: 0.2s;
+
+            a {
+                padding: 0 15px;
+                display: block;
+                font-size: 16px;
+                color: #ffffff;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
     }
-
-    &.right {
-      float: right;
-    }
-
-    li {
-      float: left;
-      line-height: 50px;
-      text-align: center;
-      transition: 0.2s;
-
-      a {
-        padding: 0 15px;
-        display: block;
-        font-size: 16px;
-        color: #ffffff;
-      }
-
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    }
-  }
 }
 
 /**
  * Main header.
  */
-header.main-header {
-  width: 100%;
-  min-width: $min-width;
-  height: 180px;
-  padding-top: 50px;
-  position: relative;
-  background-position: bottom;
 
-  .logo {
-    width: 315px;
-    height: 80px;
-    display: block;
-    position: absolute;
-    top: 20px;
-    text-indent: -9999px;
-    background: transparent url("/images/logo.png") no-repeat center;
-  }
+header.main-header {
+    width: 100%;
+    min-width: $min-width;
+    height: 180px;
+    padding-top: 50px;
+    position: relative;
+    background-position: bottom;
+
+    .container {
+        height: 130px;
+    }
+
+    .logo {
+        width: 315px;
+        height: 80px;
+        margin-top: 25px;
+        display: block;
+        float: left;
+        position: relative;
+        text-indent: -9999px;
+        background: transparent url("/images/logo.png") no-repeat center;
+    }
 }

@@ -11,7 +11,7 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-// Send users to the homepage
-Route::get('/', function() {
+// Let react router do the routing.
+Route::get('{any}', function() {
     return view('index');
-});
+})->where('any', '.*');
