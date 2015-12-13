@@ -74,8 +74,8 @@ a {
   height: auto;
   margin: 0 auto;
   padding: 0 10px;
-  position: relative;
   display: block;
+  position: relative;
   @extend .clearfix;
 }
 
@@ -138,12 +138,15 @@ header.main-header {
   min-width: $min-width;
   height: 180px;
   padding-top: 50px;
+  position: relative;
   background-position: bottom;
 
   .logo {
-    width: 325px;
+    width: 315px;
     height: 80px;
     display: block;
+    position: absolute;
+    top: 20px;
     text-indent: -9999px;
     background: transparent url("/images/logo.png") no-repeat center;
   }

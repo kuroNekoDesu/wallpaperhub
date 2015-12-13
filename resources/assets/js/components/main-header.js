@@ -14,7 +14,11 @@ import React from 'react';
 class MainHeader extends React.Component {
     render() {
         return(
-            <header className="main-header" style={{backgroundImage: 'url(' + this.props.background + ')'}}></header>
+            <header className="main-header" style={{backgroundImage: 'url("' + this.props.background + '")'}}>
+                <div className="container">
+                    <a href="/" className="logo">WallpaperHub</a>
+                </div>
+            </header>
         );
     }
 }
