@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Language" content="en">
         <meta name="viewport" content="width=1020">
-        <title><?= isset($title) ? $title : 'Untitled' ?> · wallpaperhub.cf</title>
+        <title><?php if(isset($title)) echo $title . ' · ' ?>wallpaperhub.cf</title>
         <link href="<?= url('/css/app.css') ?>" type="text/css" rel="stylesheet">
         <link href="<?= url('/images/favicon.png') ?>" type="image/png" rel="shortcut icon">
         <link href="//fonts.googleapis.com/css?family=Roboto:300,400" type="text/css" rel="stylesheet">

@@ -11,14 +11,12 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-// Route to homepage.
 Route::get('/', function() {
     return view('index', [
         'title' => 'Amazingly Awesome Wallpapers'
     ]);
 });
 
-// Route to recently added wallpapers.
 Route::get('/recent', function() {
     return view('index', [
         'title' => 'Recently Added Wallpapers'
