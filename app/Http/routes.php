@@ -11,7 +11,16 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-// Let react router do the routing.
-Route::get('{any}', function() {
-    return view('index');
-})->where('any', '.*');
+// Route to homepage.
+Route::get('/', function() {
+    return view('index', [
+        'title' => 'Amazingly Awesome Wallpapers'
+    ]);
+});
+
+// Route to recently added wallpapers.
+Route::get('/recent', function() {
+    return view('index', [
+        'title' => 'Recently Added Wallpapers'
+    ]);
+});

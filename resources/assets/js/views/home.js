@@ -10,11 +10,14 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 
 class HomeView extends React.Component {
     render() {
         return(
-            <h1>It works!</h1>
+            <div>
+                <Helmet title="Amazingly Awesome Wallpapers" />
+            </div>
         );
     };
 }

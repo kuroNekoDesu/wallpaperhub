@@ -10,6 +10,7 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import TopNav from '../components/top-nav';
 import MainHeader from '../components/main-header';
@@ -18,6 +19,7 @@ class AppView extends React.Component {
     render() {
         return(
             <div>
+                <Helmet titleTemplate="%s · wallpaperhub.cf" />
                 <TopNav />
                 <MainHeader background="/images/headers/default.jpg" />
                 {this.props.children}

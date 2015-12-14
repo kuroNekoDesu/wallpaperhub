@@ -10,11 +10,14 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 
 class RecentView extends React.Component {
     render() {
         return(
-            <h1>React is awesome!</h1>
+            <div>
+                <Helmet title="Recently Added Wallpapers" />
+            </div>
         );
     };
 }
