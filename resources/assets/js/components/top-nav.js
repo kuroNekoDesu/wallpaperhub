@@ -20,13 +20,14 @@ class TopNav extends React.Component {
                     <ul className="left">
                         <li><IndexLink to="/"><i className="fa fa-fort-awesome"></i></IndexLink></li>
                         <li><Link to="/recent">Recent</Link></li>
-                        <li><Link to="/popular">Popular</Link></li>
+                        <li><Link to="/trending">Trending</Link></li>
+                        <li><Link to="/tags">Tags</Link></li>
                         <li><Link to="/random">Random</Link></li>
-                        <li><Link to="/community">Community</Link></li>
                     </ul>
                     <ul className="right">
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/register">Register</Link></li>
+                        <li><Link to="/upload">Upload</Link></li>
                     </ul>
                 </div>
             </nav>

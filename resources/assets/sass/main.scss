@@ -15,7 +15,7 @@
 
 $root-background-color: #151515;
 $root-font-family: "Roboto", sans-serif;
-$root-font-size: 18px;
+$root-font-size: 16px;
 $root-font-weight: 300;
 $root-color: #222222;
 
@@ -23,7 +23,8 @@ $root-color: #222222;
  * Other options.
  */
 
-$min-width: 1020px;
+$min-width: 1180px;
+$transition: 0.2s;
 
 /**
  * Vendor imports.
@@ -72,10 +73,10 @@ a {
 .container {
     width: $min-width;
     height: auto;
+    position: relative;
+    display: block;
     margin: 0 auto;
     padding: 0 10px;
-    display: block;
-    position: relative;
     @extend .clearfix;
 }
 
@@ -113,17 +114,16 @@ nav.top-nav {
             float: left;
             line-height: 50px;
             text-align: center;
-            transition: 0.2s;
+            transition: $transition;
 
             a {
-                padding: 0 15px;
                 display: block;
-                font-size: 16px;
+                padding: 0 15px;
                 color: #ffffff;
             }
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.2);
+                background-color: rgba(255, 255, 255, 0.3);
             }
         }
     }
@@ -137,8 +137,8 @@ header.main-header {
     width: 100%;
     min-width: $min-width;
     height: 180px;
-    padding-top: 50px;
     position: relative;
+    padding-top: 50px;
     background-position: bottom;
 
     .container {
@@ -148,11 +148,52 @@ header.main-header {
     .logo {
         width: 315px;
         height: 80px;
-        margin-top: 25px;
-        display: block;
-        float: left;
         position: relative;
+        display: block;
+        margin-top: 25px;
+        float: left;
         text-indent: -9999px;
         background: transparent url("/images/logo.png") no-repeat center;
+    }
+
+    .search {
+        width: 450px;
+        height: 55px;
+        display: block;
+        margin-top: 37.5px;
+        float: right;
+    }
+}
+
+/**
+ * Search input.
+ */
+
+form.search {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 8px;
+
+    input[type="text"] {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 0 10% 0 10px;
+        background-color: rgba(255, 255, 255, 0.88);
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        transition: $transition;
+
+        &:focus {
+            background-color: #ffffff;
+        }
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        right: 18px;
+        bottom: 0;
     }
 }
