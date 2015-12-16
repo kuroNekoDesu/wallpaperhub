@@ -9,30 +9,18 @@
  * @link       http://www.wallpaperhub.cf
  */
 
-// If you're annoyed by the notification system, set this to true.
 process.env.DISABLE_NOTIFIER = true;
 
-// Require laravel elixir.
 var elixir = require('laravel-elixir');
 
-// Register the tasks.
+elixir.config.css.sass.pluginOptions.includePaths = ['bower_components'];
+
+elixir.config.js.browserify.options.extensions = ['.jsx'];
+
 elixir(function(mix) {
 
-    // Compile application styles.
-    mix.sass(
-        'main.scss',
-        'public/css/app.css',
-        {
-            includePaths: [
-                'node_modules/sanitize.css'
-            ]
-        }
-    );
+    mix.sass('main.scss', 'public/css/app.css');
 
-    // Compile application scripts.
-    mix.browserify(
-        'main.js',
-        'public/js/app.js'
-    );
+    mix.browserify('index.jsx', 'public/js/app.js');
 
 });

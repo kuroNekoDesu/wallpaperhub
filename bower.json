@@ -1,0 +1,8 @@
+{
+    "name": "wallpaperhub",
+    "private": true,
+    "dependencies": {
+        "sanitize-css": "~3.0.0",
+        "animatewithsass": "~3.2.2"
+    }
+}

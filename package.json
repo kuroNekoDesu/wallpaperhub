@@ -1,16 +1,17 @@
 {
     "private": true,
     "devDependencies": {
-        "gulp": "^3.8.8"
+        "gulp": "^3.8.8",
+        "bower": "^1.7.1"
     },
     "dependencies": {
-        "flux": "^2.0.1",
-        "history": "^1.13.1",
-        "laravel-elixir": "^3.0.0",
+        "flux": "^2.1.1",
         "react": "^0.14.3",
+        "history": "^1.16.0",
         "react-dom": "^0.14.3",
         "react-helmet": "^2.2.0",
         "react-router": "^1.0.2",
-        "sanitize.css": "^3.0.0"
+        "laravel-elixir": "^4.1.1",
+        "babel-preset-react": "^6.3.13"
     }
 }

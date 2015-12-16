@@ -17,8 +17,8 @@ Route::get('/', function() {
     ]);
 });
 
-Route::get('/recent', function() {
+Route::get('/explore', function() {
     return view('index', [
-        'title' => 'Recently Added Wallpapers'
+        'title' => 'Recent Wallpapers on WallpaperHub'
     ]);
 });

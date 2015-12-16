@@ -10,10 +10,10 @@
  */
 
 /**
- * Options for sanitize.css.
+ * Options for sanitize-css.
  */
 
-$root-background-color: #151515;
+$root-background-color: #eeeeee;
 $root-font-family: "Roboto", sans-serif;
 $root-font-size: 16px;
 $root-font-weight: 300;
@@ -30,7 +30,8 @@ $transition: 0.2s;
  * Vendor imports.
  */
 
-@import "sanitize.scss";
+@import "sanitize-css/sanitize.scss";
+@import "animatewithsass/animate.scss";
 
 /**
  * Extend sanitize.css root styles.
@@ -67,7 +68,39 @@ a {
 }
 
 /**
- * Containers.
+ * Caret.
+ */
+
+.caret {
+    width: 0;
+    height: 0;
+    position: relative;
+    display: inline-block;
+    margin-left: 3px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+/**
+ * Website logo.
+ */
+
+.logo {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: block;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: -2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Container.
  */
 
 .container {
@@ -80,109 +113,50 @@ a {
     @extend .clearfix;
 }
 
-.container-fluid {
-    padding: 0;
-    @extend .container;
-}
-
 /**
- * Fixed top navigation.
+ * Buttons.
  */
 
-nav.top-nav {
-    width: 100%;
-    min-width: $min-width;
-    height: 50px;
-    position: absolute;
-    z-index: 1000;
-    background-color: transparent;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-
-    ul {
-        position: relative;
-        list-style-type: none;
-
-        &.left {
-            float: left;
-        }
-
-        &.right {
-            float: right;
-        }
-
-        li {
-            float: left;
-            line-height: 50px;
-            text-align: center;
-            transition: $transition;
-
-            a {
-                display: block;
-                padding: 0 15px;
-                color: #ffffff;
-            }
-
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.3);
-            }
-        }
-    }
-}
-
-/**
- * Main header.
- */
-
-header.main-header {
-    width: 100%;
-    min-width: $min-width;
-    height: 180px;
+.btn {
+    width: auto;
+    height: auto;
     position: relative;
-    padding-top: 50px;
-    background-position: bottom;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+}
 
-    .container {
-        height: 130px;
-    }
-
-    .logo {
-        width: 315px;
-        height: 80px;
-        position: relative;
-        display: block;
-        margin-top: 25px;
-        float: left;
-        text-indent: -9999px;
-        background: transparent url("/images/logo.png") no-repeat center;
-    }
-
-    .search {
-        width: 450px;
-        height: 55px;
-        display: block;
-        margin-top: 37.5px;
-        float: right;
-    }
+.btn-big {
+    padding: 10px 15px;
 }
 
 /**
  * Search input.
  */
 
-form.search {
+.search {
     width: 100%;
     height: auto;
     position: relative;
+    display: block;
     padding: 8px;
 
     input[type="text"] {
         width: 100%;
         height: 100%;
         position: relative;
+        display: block;
         padding: 0 10% 0 10px;
-        background-color: rgba(255, 255, 255, 0.88);
-        border: 2px solid rgba(0, 0, 0, 0.3);
-        border-radius: 6px;
+        background-color: #eeeeee;
+        border-radius: 3px;
         transition: $transition;
 
         &:focus {
@@ -192,8 +166,151 @@ form.search {
 
     button {
         position: absolute;
-        top: 0;
+        display: block;
+        top: 8px;
         right: 18px;
-        bottom: 0;
+        bottom: 8px;
+        cursor: pointer;
+    }
+}
+
+/**
+ * Top navigation bar.
+ */
+
+.top-bar {
+    width: 100%;
+    min-width: $min-width;
+    height: 50px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    background-color: #151515;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    .container {
+        display: flex;
+        padding: 0;
+    }
+
+    ul {
+        position: relative;
+        display: block;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            display: block;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+            transition: $transition;
+
+            a {
+                position: relative;
+                display: block;
+                padding: 0 15px;
+                color: #cccccc;
+                transition: $transition;
+
+                &:hover {
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .left {
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+
+    .right {
+        position: relative;
+        display: inline-block;
+        float: right;
+    }
+
+    .middle {
+        position: relative;
+        display: inline-block;
+        flex: 1 1 auto;
+    }
+
+    .logo {
+        color: #ffffff !important;
+        background-image: linear-gradient(to bottom, #aa00bd 0, #570061 100%);
+    }
+
+    .search {
+        height: 50px;
+        float: left;
+    }
+}
+
+/**
+ * Main contents wrapper.
+ */
+
+.main-contents {
+    width: 100%;
+    min-width: $min-width;
+    height: auto;
+    position: relative;
+    padding-top: 50px;
+}
+
+/**
+ * Welcome splash.
+ */
+
+.welcome {
+    width: 100%;
+    min-width: $min-width;
+    height: 100vh;
+    position: relative;
+    padding-top: -50px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+        font-size: 50px;
+        @include fadeInDown();
+    }
+
+    .intro {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        font-size: 24px;
+        color: #ffffff;
+        @include fadeInDown($delay: 0.6s);
+    }
+
+    .btn {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        transition: $transition;
+        @include fadeInDown($delay: 0.6s);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
     }
 }
